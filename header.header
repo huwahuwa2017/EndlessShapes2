@@ -1,0 +1,9 @@
+{
+  "Authors": "Authors include huwahuwa",
+  "Version": "00000000-0000-0000-0000-000000000000",
+  "ComponentId": {
+    "Guid": "65ddbed3-21cd-4172-8f60-2a9c34da03da",
+    "Name": "EndlessShapes2"
+  },
+  "Description": "New description"
+}

@@ -1,0 +1,37 @@
+{
+  "usage": 1,
+  "IconReference": {
+    "Reference": {
+      "Guid": "00000000-0000-0000-0000-000000000000",
+      "Name": ""
+    },
+    "IsValidReference": false
+  },
+  "AssetBundleReference": {
+    "Reference": {
+      "Guid": "00000000-0000-0000-0000-000000000000",
+      "Name": ""
+    },
+    "IsValidReference": false
+  },
+  "DesignerOnly": true,
+  "ShortName": "deco",
+  "DisplayName": "Deco",
+  "Tab": 3,
+  "prefabID": "",
+  "PrefabSource": 0,
+  "Code": {
+    "ViewTheseOptions": false,
+    "Variables": {
+      "Variables": [],
+      "VariableCount": 0
+    },
+    "ClassName": "DecorationTetherMove"
+  },
+  "TwoHanded": true,
+  "ComponentId": {
+    "Guid": "19cf3dd2-86fc-4b97-9e69-23e34cc3f198",
+    "Name": "Deco"
+  },
+  "Description": "New description"
+}

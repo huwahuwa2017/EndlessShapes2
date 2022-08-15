@@ -1,0 +1,19 @@
+{
+  "FilenameOrUrl": "StereoscopicHologram.obj",
+  "Source": 0,
+  "DefaultMaterialForDisplayReference": {
+    "Reference": {
+      "Guid": "2dbba7ea-61a9-4d76-bcb6-12b927f0ea08",
+      "Name": "advcannon mat"
+    },
+    "IsValidReference": true
+  },
+  "XImportScaleFactor": 1.0,
+  "YImportScaleFactor": 1.0,
+  "ZImportScaleFactor": 1.0,
+  "ComponentId": {
+    "Guid": "057bd9bb-6442-406a-aee5-c11bb313426c",
+    "Name": "StereoscopicHologram"
+  },
+  "Description": "New description"
+}
