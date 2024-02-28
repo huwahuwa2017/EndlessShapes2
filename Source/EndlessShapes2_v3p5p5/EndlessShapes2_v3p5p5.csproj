@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}</ProjectGuid>
+    <ProjectGuid>{8E45789C-7C78-45AB-817B-F286C5EC729C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EndlessShapes2</RootNamespace>

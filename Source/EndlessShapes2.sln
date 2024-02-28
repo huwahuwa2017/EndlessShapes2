@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p4p3", "EndlessShapes2_v3p4p3\EndlessShapes2_v3p4p3.csproj", "{7BFC3CDE-0578-4FB2-89EE-B0D45F6329B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p5p5", "EndlessShapes2_v3p5p5\EndlessShapes2_v3p5p5.csproj", "{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p8p5", "EndlessShapes2_v3p8p5\EndlessShapes2_v3p8p5.csproj", "{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p5p5", "EndlessShapes2_v3p5p5\EndlessShapes2_v3p5p5.csproj", "{8E45789C-7C78-45AB-817B-F286C5EC729C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAB7114D-B1E3-4679-B856-7EDC4EBCF05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E45789C-7C78-45AB-817B-F286C5EC729C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E45789C-7C78-45AB-817B-F286C5EC729C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E45789C-7C78-45AB-817B-F286C5EC729C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E45789C-7C78-45AB-817B-F286C5EC729C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

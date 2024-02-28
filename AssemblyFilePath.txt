@@ -1,3 +1,6 @@
+v 3.8.5
+Source/EndlessShapes2_v3p8p5/DLL/0Harmony.dll
+Source/EndlessShapes2_v3p8p5/DLL/EndlessShapes2.dll
 v 3.5.5
 Source/EndlessShapes2_v3p5p5/DLL/0Harmony.dll
 Source/EndlessShapes2_v3p5p5/DLL/EndlessShapes2.dll
