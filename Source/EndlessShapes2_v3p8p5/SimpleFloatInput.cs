@@ -1,6 +1,5 @@
 ﻿using BrilliantSkies.Core;
 using BrilliantSkies.Core.StringGarbage;
-using BrilliantSkies.PlayerProfiles;
 using BrilliantSkies.Ui.Consoles;
 using BrilliantSkies.Ui.Consoles.Getters;
 using BrilliantSkies.Ui.Consoles.Interpretters.Subjective;

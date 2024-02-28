@@ -37,7 +37,6 @@ namespace EndlessShapes2.UI
             SubjectiveDisplay_DecorationBuilder((I => "Number of decorations to generate")).Justify = TextAnchor.UpperRight;
             SubjectiveDisplay_DecorationBuilder((I => I.PolygonDataListCount.ToString())).Justify = TextAnchor.UpperLeft;
 
-
             ScreenSegmentStandard screenSegment_1 = CreateStandardSegment();
             screenSegment_1.SpaceAbove = 20f;
             screenSegment_1.SpaceBelow = 20f;

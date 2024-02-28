@@ -41,7 +41,7 @@ namespace EndlessShapes2
 
 
         [Variable(9U, "Tether Point automatic placement", "Place the Tether Point close to the Decoration.")]
-        public VarBool TP_AutomaticMove { get; set; } = new VarBool(false);
+        public VarBool TP_AutoTetherPoint { get; set; } = new VarBool(false);
 
         [Variable(10U, "Tether Point normal offset", "Shift Tether Point in the opposite direction of the polygon normal.")]
         public VarBool TP_NormalOffset { get; set; } = new VarBool(false);
@@ -64,6 +64,6 @@ namespace EndlessShapes2
 
 
         [Variable(16U, "Local origin projection", "Projects a 3D model relative to the local origin.")]
-        public VarBool LocalOriginProjection { get; set; } = new VarBool(false);
+        public VarBool LocalOrigin { get; set; } = new VarBool(false);
     }
 }

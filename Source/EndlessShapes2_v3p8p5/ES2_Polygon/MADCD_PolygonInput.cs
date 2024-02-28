@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EndlessShapes2.Polygon
 {
-    public static class MADCD_Generation
+    public static class MADCD_PolygonInput
     {
         public static bool NormalReversal { get; set; } = false;
 
@@ -16,7 +16,20 @@ namespace EndlessShapes2.Polygon
 
         public static Func<PolygonData, int> ColorSetting { get; set; } = null;
 
-        public static void Generate(MimicAndDecorationCommonData madcd, PolygonData polygonData)
+        private static void InputMAD_Data(MimicAndDecorationCommonData madcd, Guid guid, Vector3 position, Vector3 scare, Vector3 angles, int colorIndex)
+        {
+            madcd.MeshGuid = guid;
+            madcd.Positioning = new Vector3(Rounding.R4(position.x), Rounding.R4(position.y), Rounding.R4(position.z));
+            madcd.Scaling = new Vector3(Rounding.R4(scare.x), Rounding.R4(scare.y), Rounding.R4(scare.z));
+            madcd.Orientation = new Vector3(Rounding.R4(angles.x), Rounding.R4(angles.y), Rounding.R4(angles.z));
+
+            if (colorIndex >= 0)
+            {
+                madcd.ColorIndex = colorIndex;
+            }
+        }
+
+        public static void Start(MimicAndDecorationCommonData madcd, PolygonData polygonData)
         {
             int colorIndex = -1;
 
@@ -25,7 +38,7 @@ namespace EndlessShapes2.Polygon
                 colorIndex = ColorSetting(polygonData);
             }
 
-            StructureBlockGUID SBGUID = StructureBlockGUID_Memory.GetSBGUID(SBType);
+            StructureBlockGUID SBGUID = StructureBlockGUID.GetSBGUID(SBType);
 
             SideData[] sides = polygonData.Sides;
             Vector3 normalVector = polygonData.NormalVector * ((NormalReversal ? -FaceThickness : FaceThickness) / 2);
@@ -105,19 +118,6 @@ namespace EndlessShapes2.Polygon
 
                     InputMAD_Data(madcd, SBGUID.Pole, position, scare, angles, colorIndex);
                     break;
-            }
-        }
-
-        private static void InputMAD_Data(MimicAndDecorationCommonData madcd, Guid guid, Vector3 position, Vector3 scare, Vector3 angles, int colorIndex)
-        {
-            madcd.MeshGuid = guid;
-            madcd.Positioning = new Vector3(Rounding.R4(position.x), Rounding.R4(position.y), Rounding.R4(position.z));
-            madcd.Scaling = new Vector3(Rounding.R4(scare.x), Rounding.R4(scare.y), Rounding.R4(scare.z));
-            madcd.Orientation = new Vector3(Rounding.R4(angles.x), Rounding.R4(angles.y), Rounding.R4(angles.z));
-
-            if (colorIndex >= 0)
-            {
-                madcd.ColorIndex = colorIndex;
             }
         }
     }

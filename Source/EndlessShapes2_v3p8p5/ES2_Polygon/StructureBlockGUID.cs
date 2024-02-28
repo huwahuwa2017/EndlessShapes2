@@ -1,8 +1,10 @@
-﻿namespace EndlessShapes2.Polygon
+﻿using System;
+
+namespace EndlessShapes2.Polygon
 {
-    public static class StructureBlockGUID_Memory
+    public struct StructureBlockGUID
     {
-        private static StructureBlockGUID[] SBGUIDs = new StructureBlockGUID[]
+        private static StructureBlockGUID[] _SBGUIDs = new StructureBlockGUID[]
         {
             new StructureBlockGUID(
                 "2d519ca8-1f12-4a8e-9340-aa6648b5e799",
@@ -48,7 +50,25 @@
 
         public static StructureBlockGUID GetSBGUID(StructureBlockType structureBlockType)
         {
-            return SBGUIDs[(int)structureBlockType];
+            return _SBGUIDs[(int)structureBlockType];
+        }
+
+
+
+        public Guid Block;
+
+        public Guid Slope;
+
+        public Guid Wedge;
+
+        public Guid Pole;
+
+        public StructureBlockGUID(string block, string slope, string wedge, string pole)
+        {
+            Block = new Guid(block);
+            Slope = new Guid(slope);
+            Wedge = new Guid(wedge);
+            Pole = new Guid(pole);
         }
     }
 }

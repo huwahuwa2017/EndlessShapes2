@@ -125,7 +125,7 @@ namespace EndlessShapes2
                     vartex = Vector3.Scale(vartex, Data.Scaling.Us);
                     vartex = Quaternion.Euler(Data.Orientation.Us) * vartex;
 
-                    if (Data.LocalOriginProjection)
+                    if (Data.LocalOrigin)
                     {
                         vartex += Data.Positioning.Us;
 
@@ -165,7 +165,12 @@ namespace EndlessShapes2
             ConnectionRules connectionRules = _myAllConstruct.Main.ConnectionRules as ConnectionRules;
             if (connectionRules == null) return;
 
-            _itemDef = Configured.i.Get<ModificationComponentContainerItem>().Find(new Guid(Data.TP_BlockGUID.Us), out _itemDefFound);
+            _itemDefFound = false;
+
+            if (Data.TP_BlockPlacement.Us && Guid.TryParse(Data.TP_BlockGUID.Us, out Guid guid))
+            {
+                _itemDef = Configured.i.Get<ModificationComponentContainerItem>().Find(guid, out _itemDefFound);
+            }
 
             for (int index = 0; index < 28; ++index)
             {
@@ -184,11 +189,11 @@ namespace EndlessShapes2
             connectionRules.Data.MasterSwitch.Us = false;
             connectionRules.Data.RequestSwitch.Us = false;
 
-            MADCD_Generation.NormalReversal = false;
-            MADCD_Generation.FaceThickness = Data.FaceThickness.Us;
-            MADCD_Generation.LineThickness = Data.LineThickness.Us;
-            MADCD_Generation.SBType = Data.SBType.Us;
-            MADCD_Generation.ColorSetting = ColorSetting;
+            MADCD_PolygonInput.NormalReversal = false;
+            MADCD_PolygonInput.FaceThickness = Data.FaceThickness.Us;
+            MADCD_PolygonInput.LineThickness = Data.LineThickness.Us;
+            MADCD_PolygonInput.SBType = Data.SBType.Us;
+            MADCD_PolygonInput.ColorSetting = ColorSetting;
 
             if (Data.BuildAnimation.Us)
             {
@@ -228,11 +233,11 @@ namespace EndlessShapes2
         {
             MimicAndDecorationCommonData MAD_Data = new MimicAndDecorationCommonData();
 
-            MADCD_Generation.Generate(MAD_Data, polygonData);
+            MADCD_PolygonInput.Start(MAD_Data, polygonData);
 
             Vector3i position = LocalPosition;
 
-            if (Data.TP_AutomaticMove.Us)
+            if (Data.TP_AutoTetherPoint.Us)
             {
                 Vector3 temp_3 = Vector3Int.RoundToInt(MAD_Data.Positioning);
 

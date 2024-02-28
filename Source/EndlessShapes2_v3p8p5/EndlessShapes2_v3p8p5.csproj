@@ -113,24 +113,23 @@
     <Compile Include="ModInformation.cs" />
     <Compile Include="ModStartup.cs" />
     <Compile Include="OBJ_FileCreation.cs" />
-    <Compile Include="Polygon\MADCD_Generation.cs" />
-    <Compile Include="Polygon\PolygonType.cs" />
-    <Compile Include="Polygon\StructureBlockGUID_Memory.cs" />
-    <Compile Include="Polygon\SideData.cs" />
-    <Compile Include="Polygon\StructureBlockType.cs" />
-    <Compile Include="UI\DBUIAdvancedSettingTab.cs" />
-    <Compile Include="UI\DBUI_BasicSettingTab.cs" />
-    <Compile Include="UI\DBUI_FinalConfirmationWindows.cs" />
-    <Compile Include="UI\DBUI_SettingWindows.cs" />
+    <Compile Include="ES2_Polygon\MADCD_PolygonInput.cs" />
+    <Compile Include="ES2_Polygon\PolygonType.cs" />
+    <Compile Include="ES2_Polygon\SideData.cs" />
+    <Compile Include="ES2_Polygon\StructureBlockType.cs" />
+    <Compile Include="ES2_UI\DBUIAdvancedSettingTab.cs" />
+    <Compile Include="ES2_UI\DBUI_BasicSettingTab.cs" />
+    <Compile Include="ES2_UI\DBUI_FinalConfirmationWindows.cs" />
+    <Compile Include="ES2_UI\DBUI_SettingWindows.cs" />
     <Compile Include="DecorationTetherMove.cs" />
-    <Compile Include="UI\DBUI_FinalConfirmationTab.cs" />
-    <Compile Include="Polygon\MimicAndDecorationCommonData.cs" />
+    <Compile Include="ES2_UI\DBUI_FinalConfirmationTab.cs" />
+    <Compile Include="ES2_Polygon\MimicAndDecorationCommonData.cs" />
     <Compile Include="OBJ_Mesh.cs" />
-    <Compile Include="Polygon\PolygonData.cs" />
-    <Compile Include="Polygon\PolygonDataControl.cs" />
+    <Compile Include="ES2_Polygon\PolygonData.cs" />
+    <Compile Include="ES2_Polygon\PolygonDataControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleFloatInput.cs" />
-    <Compile Include="Polygon\StructureBlockGUID.cs" />
+    <Compile Include="ES2_Polygon\StructureBlockGUID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

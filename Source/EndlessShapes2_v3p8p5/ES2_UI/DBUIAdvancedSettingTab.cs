@@ -7,11 +7,6 @@ using BrilliantSkies.Ui.Consoles.Interpretters.Subjective.Choices;
 using BrilliantSkies.Ui.Consoles.Interpretters.Subjective.Texts;
 using BrilliantSkies.Ui.Consoles.Segments;
 using BrilliantSkies.Ui.Tips;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace EndlessShapes2.UI
@@ -64,27 +59,26 @@ namespace EndlessShapes2.UI
             screenSegment_1.SpaceAbove = 10f;
             screenSegment_1.SpaceBelow = 10f;
 
-            screenSegment_1.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Automatic move", null, (I, b) => { I.Data.TP_AutomaticMove.Us = b; TriggerScreenRebuild(); }, I => I.Data.TP_AutomaticMove.Us));
+            screenSegment_1.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Auto tether point", null, (I, b) => { I.Data.TP_AutoTetherPoint.Us = b; TriggerScreenRebuild(); }, I => I.Data.TP_AutoTetherPoint.Us));
 
-            if (_focus.Data.TP_AutomaticMove.Us)
+            if (_focus.Data.TP_AutoTetherPoint.Us)
             {
                 screenSegment_1.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Normal offset", null, (I, b) => { I.Data.TP_NormalOffset.Us = b; TriggerScreenRebuild(); }, I => I.Data.TP_NormalOffset.Us));
+
+                if (_focus.Data.TP_NormalOffset.Us)
+                {
+                    screenSegment_1.AddInterpretter(SimpleFloatInput<DecorationBuilder>.Quick(_focus, M.m<DecorationBuilder>(I => I.Data.TP_DistanceToShift.Us), null, (I, i) => I.Data.TP_DistanceToShift.Us = i, M.m<DecorationBuilder>(I => "Distance to shift ")));
+                }
+
+                screenSegment_1.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Block placement", null, (I, b) => { I.Data.TP_BlockPlacement.Us = b; TriggerScreenRebuild(); }, I => I.Data.TP_BlockPlacement.Us));
+
+                if (_focus.Data.TP_BlockPlacement.Us)
+                {
+                    screenSegment_1.AddInterpretter(TextInput<DecorationBuilder>.Quick(_focus, M.m<DecorationBuilder>(I => I.Data.TP_BlockGUID.Us), "Block GUID", null, (I, s) => I.Data.TP_BlockGUID.Us = s));
+                }
             }
 
-            if (_focus.Data.TP_NormalOffset.Us)
-            {
-                screenSegment_1.AddInterpretter(SimpleFloatInput<DecorationBuilder>.Quick(_focus, M.m<DecorationBuilder>(I => I.Data.TP_DistanceToShift.Us), null, (I, i) => I.Data.TP_DistanceToShift.Us = i, M.m<DecorationBuilder>(I => "Distance to shift ")));
-            }
-
-            screenSegment_1.AddInterpretter(new Empty());
-
-            screenSegment_1.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Block placement", null, (I, b) => { I.Data.TP_BlockPlacement.Us = b; TriggerScreenRebuild(); }, I => I.Data.TP_BlockPlacement.Us));
-
-            if (_focus.Data.TP_BlockPlacement.Us)
-            {
-                screenSegment_1.AddInterpretter(TextInput<DecorationBuilder>.Quick(_focus, M.m<DecorationBuilder>(I => I.Data.TP_BlockGUID.Us), "Block GUID", null, (I, s) => I.Data.TP_BlockGUID.Us = s));
-            }
-
+            /*
             CreateHeader("Others", null);
 
             ScreenSegmentStandard screenSegment_2 = CreateStandardSegment();
@@ -100,7 +94,8 @@ namespace EndlessShapes2.UI
 
             screenSegment_2.AddInterpretter(new Empty());
 
-            screenSegment_2.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Local origin projection", new ToolTip("Generates a 3D model relative to the local origin."), (I, b) => I.Data.LocalOriginProjection.Us = b, I => I.Data.LocalOriginProjection.Us));
+            screenSegment_2.AddInterpretter(SubjectiveToggle<DecorationBuilder>.Quick(_focus, "Local origin projection", new ToolTip("Generates a 3D model relative to the local origin."), (I, b) => I.Data.LocalOrigin.Us = b, I => I.Data.LocalOrigin.Us));
+            */
         }
     }
 }

@@ -7,6 +7,28 @@ namespace EndlessShapes2.Polygon
 {
     public class MimicAndDecorationCommonData
     {
+        private enum MAD_DataType
+        {
+            None,
+            Mimic,
+            Decoration
+        }
+
+        private class MDCD
+        {
+            public Guid MeshGuid { get; set; } = Guid.Empty;
+
+            public Vector3 Positioning { get; set; } = Vector3.zero;
+
+            public Vector3 Scaling { get; set; } = Vector3.one;
+
+            public Vector3 Orientation { get; set; } = Vector3.zero;
+
+            public int ColorIndex { get; set; } = 0;
+
+            public Guid MaterialReplacement { get; set; } = Guid.Empty;
+        }
+
         public static void Copy(MimicAndDecorationCommonData source, MimicAndDecorationCommonData destination)
         {
             destination.MeshGuid = source.MeshGuid;
@@ -14,23 +36,14 @@ namespace EndlessShapes2.Polygon
             destination.Scaling = source.Scaling;
             destination.Orientation = source.Orientation;
             destination.ColorIndex = source.ColorIndex;
+            destination.MaterialReplacement = source.MaterialReplacement;
         }
 
 
 
         private MAD_DataType _dataType = MAD_DataType.None;
 
-        private object _obj;
-
-        private Guid _meshGuid = new Guid();
-
-        private Vector3 _positioning = Vector3.zero;
-
-        private Vector3 _scaling = Vector3.one;
-
-        private Vector3 _orientation = Vector3.zero;
-
-        private int _colorIndex = 0;
+        private object _obj = null;
 
         public Guid MeshGuid
         {
@@ -39,7 +52,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        return _meshGuid;
+                        return ((MDCD)_obj).MeshGuid;
                     case MAD_DataType.Mimic:
                         return ((Mimic)_obj).Data.MeshGuid.Us;
                     case MAD_DataType.Decoration:
@@ -53,7 +66,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        _meshGuid = value;
+                        ((MDCD)_obj).MeshGuid = value;
                         break;
                     case MAD_DataType.Mimic:
                         ((Mimic)_obj).Data.MeshGuid.Us = value;
@@ -72,7 +85,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        return _positioning;
+                        return ((MDCD)_obj).Positioning;
                     case MAD_DataType.Mimic:
                         return ((Mimic)_obj).Data.Positioning.Us;
                     case MAD_DataType.Decoration:
@@ -86,7 +99,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        _positioning = value;
+                        ((MDCD)_obj).Positioning = value;
                         break;
                     case MAD_DataType.Mimic:
                         ((Mimic)_obj).Data.Positioning.Us = value;
@@ -105,7 +118,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        return _scaling;
+                        return ((MDCD)_obj).Scaling;
                     case MAD_DataType.Mimic:
                         return ((Mimic)_obj).Data.Scaling.Us;
                     case MAD_DataType.Decoration:
@@ -119,7 +132,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        _scaling = value;
+                        ((MDCD)_obj).Scaling = value;
                         break;
                     case MAD_DataType.Mimic:
                         ((Mimic)_obj).Data.Scaling.Us = value;
@@ -138,7 +151,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        return _orientation;
+                        return ((MDCD)_obj).Orientation;
                     case MAD_DataType.Mimic:
                         return ((Mimic)_obj).Data.Orientation.Us;
                     case MAD_DataType.Decoration:
@@ -152,7 +165,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        _orientation = value;
+                        ((MDCD)_obj).Orientation = value;
                         break;
                     case MAD_DataType.Mimic:
                         ((Mimic)_obj).Data.Orientation.Us = value;
@@ -171,7 +184,7 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        return _colorIndex;
+                        return ((MDCD)_obj).ColorIndex;
                     case MAD_DataType.Mimic:
                         return ((Mimic)_obj).color;
                     case MAD_DataType.Decoration:
@@ -185,13 +198,46 @@ namespace EndlessShapes2.Polygon
                 switch (_dataType)
                 {
                     case MAD_DataType.None:
-                        _colorIndex = value;
+                        ((MDCD)_obj).ColorIndex = value;
                         break;
                     case MAD_DataType.Mimic:
                         ((Mimic)_obj).SetColor(value);
                         break;
                     case MAD_DataType.Decoration:
                         ((Decoration)_obj).Color.Us = value;
+                        break;
+                }
+            }
+        }
+
+        public Guid MaterialReplacement
+        {
+            get
+            {
+                switch (_dataType)
+                {
+                    case MAD_DataType.None:
+                        return ((MDCD)_obj).MaterialReplacement;
+                    case MAD_DataType.Mimic:
+                        return ((Mimic)_obj).Data.MaterialReplacement.Us;
+                    case MAD_DataType.Decoration:
+                        return ((Decoration)_obj).MaterialReplacement.Us;
+                    default:
+                        return default;
+                }
+            }
+            set
+            {
+                switch (_dataType)
+                {
+                    case MAD_DataType.None:
+                        ((MDCD)_obj).MaterialReplacement = value;
+                        break;
+                    case MAD_DataType.Mimic:
+                        ((Mimic)_obj).Data.MaterialReplacement.Us = value;
+                        break;
+                    case MAD_DataType.Decoration:
+                        ((Decoration)_obj).MaterialReplacement.Us = value;
                         break;
                 }
             }
@@ -329,6 +375,8 @@ namespace EndlessShapes2.Polygon
 
         public MimicAndDecorationCommonData()
         {
+            _dataType = MAD_DataType.None;
+            _obj = new MDCD();
         }
 
         public MimicAndDecorationCommonData(Mimic mimic)
@@ -341,13 +389,6 @@ namespace EndlessShapes2.Polygon
         {
             _dataType = MAD_DataType.Decoration;
             _obj = decoration;
-        }
-
-        private enum MAD_DataType
-        {
-            None,
-            Mimic,
-            Decoration
         }
     }
 }
