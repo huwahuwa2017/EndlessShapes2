@@ -1,9 +1,9 @@
 {
   "_comments": "",
   "name": "EndlessShapes2",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "gameversion": "3.4.3",
   "depends": [],
   "conflicts": [],
-  "filename": "Source/ModAssemblySelector.dll"
+  "filename": "ModAssemblySelector.dll"
 }
