@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p4p3", "EndlessShapes2_v3p4p3\EndlessShapes2_v3p4p3.csproj", "{7BFC3CDE-0578-4FB2-89EE-B0D45F6329B4}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v3p5p5", "EndlessShapes2_v3p5p5\EndlessShapes2_v3p5p5.csproj", "{8E45789C-7C78-45AB-817B-F286C5EC729C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v4p2p1", "EndlessShapes2_v4p2p1\EndlessShapes2_v4p2p1.csproj", "{006F8A3F-7536-4243-A803-C07DD615EECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndlessShapes2_v4p2p9", "EndlessShapes2_v4p2p9\EndlessShapes2_v4p2p9.csproj", "{1E131211-3145-48DD-801B-561C9BD6A6F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{006F8A3F-7536-4243-A803-C07DD615EECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{006F8A3F-7536-4243-A803-C07DD615EECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{006F8A3F-7536-4243-A803-C07DD615EECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E131211-3145-48DD-801B-561C9BD6A6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E131211-3145-48DD-801B-561C9BD6A6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E131211-3145-48DD-801B-561C9BD6A6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E131211-3145-48DD-801B-561C9BD6A6F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

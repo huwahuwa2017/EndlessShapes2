@@ -1,3 +1,6 @@
+v 4.2.9
+Source/EndlessShapes2_v4p2p9/DLL/0Harmony.dll
+Source/EndlessShapes2_v4p2p9/DLL/EndlessShapes2.dll
 v 4.2.1
 Source/EndlessShapes2_v4p2p1/DLL/0Harmony.dll
 Source/EndlessShapes2_v4p2p1/DLL/EndlessShapes2.dll

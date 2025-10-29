@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AssemblyName>EndlessShapes2</AssemblyName>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /y &quot;$(TargetDir)EndlessShapes2.dll&quot; &quot;$(ProjectDir)DLL&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>DLL\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Common">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DataManagement">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\DataManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Ftd">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Ftd.dll</HintPath>
+    </Reference>
+    <Reference Include="GridCasts">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\GridCasts.dll</HintPath>
+    </Reference>
+    <Reference Include="Modding">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Modding.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamworks">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Steamworks.dll</HintPath>
+    </Reference>
+    <Reference Include="Ui">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\From The Depths\From_The_Depths_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
