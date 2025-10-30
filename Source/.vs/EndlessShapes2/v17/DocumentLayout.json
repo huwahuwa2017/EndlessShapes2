@@ -3,12 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|c:\\users\\tuf_z390\\documents\\github\\endlessshapes2\\source\\endlessshapes2_v4p2p9\\es2_polygon\\madcd_polygoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|solutionrelative:endlessshapes2_v4p2p9\\es2_polygon\\madcd_polygoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\plugin.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|c:\\users\\tuf_z390\\documents\\github\\endlessshapes2\\source\\endlessshapes2_v4p2p9\\decorationbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|solutionrelative:endlessshapes2_v4p2p9\\decorationbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|c:\\users\\tuf_z390\\documents\\github\\endlessshapes2\\source\\endlessshapes2_v4p2p9\\es2_polygon\\madcd_polygoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|solutionrelative:endlessshapes2_v4p2p9\\es2_polygon\\madcd_polygoninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E131211-3145-48DD-801B-561C9BD6A6F3}|EndlessShapes2_v4p2p9\\EndlessShapes2_v4p2p9.csproj|c:\\users\\tuf_z390\\documents\\github\\endlessshapes2\\source\\endlessshapes2_v4p2p9\\modinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,19 +30,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "plugin.json",
+              "DocumentMoniker": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\plugin.json",
+              "RelativeDocumentMoniker": "..\\plugin.json",
+              "ToolTip": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\plugin.json",
+              "RelativeToolTip": "..\\plugin.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-30T23:08:30.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MADCD_PolygonInput.cs",
               "DocumentMoniker": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\Source\\EndlessShapes2_v4p2p9\\ES2_Polygon\\MADCD_PolygonInput.cs",
               "RelativeDocumentMoniker": "EndlessShapes2_v4p2p9\\ES2_Polygon\\MADCD_PolygonInput.cs",
               "ToolTip": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\Source\\EndlessShapes2_v4p2p9\\ES2_Polygon\\MADCD_PolygonInput.cs",
               "RelativeToolTip": "EndlessShapes2_v4p2p9\\ES2_Polygon\\MADCD_PolygonInput.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAUwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBIAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T21:29:25.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ModInformation.cs",
               "DocumentMoniker": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\Source\\EndlessShapes2_v4p2p9\\ModInformation.cs",
               "RelativeDocumentMoniker": "EndlessShapes2_v4p2p9\\ModInformation.cs",
@@ -47,7 +63,8 @@
               "RelativeToolTip": "EndlessShapes2_v4p2p9\\ModInformation.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAMwEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T01:44:49.861Z"
+              "WhenOpened": "2025-10-29T01:44:49.861Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,9 +74,10 @@
               "RelativeDocumentMoniker": "EndlessShapes2_v4p2p9\\DecorationBuilder.cs",
               "ToolTip": "C:\\Users\\TUF_Z390\\Documents\\GitHub\\EndlessShapes2\\Source\\EndlessShapes2_v4p2p9\\DecorationBuilder.cs",
               "RelativeToolTip": "EndlessShapes2_v4p2p9\\DecorationBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAmwCEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T01:26:18.175Z"
+              "WhenOpened": "2025-10-29T01:26:18.175Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -23,9 +23,9 @@ namespace EndlessShapes2.Polygon
             madcd.Scaling = scare;
             madcd.Orientation = angles;
 
-            //madcd.Positioning = new Vector3(Rounding.R4(position.x), Rounding.R4(position.y), Rounding.R4(position.z));
-            //madcd.Scaling = new Vector3(Rounding.R4(scare.x), Rounding.R4(scare.y), Rounding.R4(scare.z));
-            //madcd.Orientation = new Vector3(Rounding.R4(angles.x), Rounding.R4(angles.y), Rounding.R4(angles.z));
+            madcd.Positioning = new Vector3(Rounding.R4(position.x), Rounding.R4(position.y), Rounding.R4(position.z));
+            madcd.Scaling = new Vector3(Rounding.R4(scare.x), Rounding.R4(scare.y), Rounding.R4(scare.z));
+            madcd.Orientation = new Vector3(Rounding.R4(angles.x), Rounding.R4(angles.y), Rounding.R4(angles.z));
 
             if (colorIndex >= 0)
             {

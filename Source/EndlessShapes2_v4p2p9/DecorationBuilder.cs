@@ -278,6 +278,16 @@ namespace EndlessShapes2
             }
 
             Decoration decoration = new Decoration();
+
+            // 制限解除
+            if (true)
+            {
+                decoration.Positioning.MaxElementValue = float.PositiveInfinity;
+                decoration.Positioning.MinElementValue = float.NegativeInfinity;
+                decoration.Scaling.MaxElementValue = float.PositiveInfinity;
+                decoration.Scaling.MinElementValue = float.NegativeInfinity;
+            }
+
             decoration.Initialise(_myAllConstruct, position);
             _acd.Packets.NewPackage(decoration);
             _myAllConstruct.Chunks.RenderableAdded(decoration);
